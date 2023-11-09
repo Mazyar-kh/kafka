@@ -1,0 +1,1 @@
+in the server.properties if we intend to create an kafka cluster its require for any broker to have an unique "broker.id" number. 
