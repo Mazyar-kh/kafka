@@ -1,0 +1,32 @@
+To install ksqlDB on CentOS 8, you can follow these steps:
+
+1. Add the Confluent repository to your system by creating a new file named confluent.repo in the /etc/yum.repos.d/ directory:
+
+sudo vi /etc/yum.repos.d/confluent.repo
+
+2. Add the following content to the confluent.repo file:
+
+`
+[Confluent]
+name=Confluent repository
+baseurl=https://packages.confluent.io/rpm/6.2
+gpgcheck=1
+gpgkey=https://packages.confluent.io/rpm/6.2/archive.key
+enabled=1
+`
+
+3. Save and close the file.
+
+4. Update the package list and install ksqlDB using the following commands:
+
+sudo yum update
+sudo yum install confluent-community-ksqldb
+
+5. Once the installation is complete, you can start ksqlDB by running the following command:
+
+ksql-server-start /etc/ksqldb/ksql-server.properties
+
+Now, ksqlDB should be installed and running on your CentOS 8 system. You can access it through its web interface or command-line interface to start working with it.
+
+Daily quota: 2/3
+ENG | ES | عربي | 中文 | فارسی
