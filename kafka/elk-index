@@ -1,0 +1,31 @@
+# an instance for the data type for the priveous index
+{"key": "example_key7","value": {"field7": "value7","field7": "value7"}}
+# an example for get queue
+#################
+GET /gg2/_search
+{
+  "query": {
+    "match": {
+      "value.field1": "value1"
+    }
+  }
+}
+################
+curl -XPUT "http://localhost:9200/example_index" -H 'Content-Type: application/json' -d '{
+  "mappings": {
+    "properties": {
+      "key": {
+        "type": "keyword"
+      },
+      "value": {
+        "type": "object",
+        "properties": {
+          "field7": {
+            "type": "text"
+          }
+        }
+      }
+    }
+  }
+}'
+################
