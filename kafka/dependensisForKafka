@@ -3,3 +3,5 @@ https://www.howtoforge.com/tutorial/centos-apache-maven/
 
 # kafka installation on centos8
 https://tecadmin.net/install-apache-kafka-centos-8/
+
+#confluent platform installation plus kafka-connector-kafka for the nodes that will run the connector
