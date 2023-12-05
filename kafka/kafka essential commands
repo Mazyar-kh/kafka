@@ -12,7 +12,3 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopi
 /usr/local/kafka/bin/connect-standalone.sh /etc/kafka/connect-standalone.properties  ./quickstart-elasticsearch.properties
 
 
-ERROR [elasticsearch-sink|task-0] [Consumer clientId=connector-consumer-elasticsearch-sink-0, groupId=connect-elasticsearch-sink] User provided listener org.apache.kafka.connect.runtime.WorkerSinkTask$HandleRebalance failed on invocation of onPartitionsAssigned for partitions [vay-0, vay-1, vay-2, vay-3, vay-4, vay-5, vay-6, vay-7, vay-8, vay-9, vay-10, vay-11] (org.apache.kafka.clients.consumer.internals.ConsumerCoordinator:334)
-org.apache.kafka.common.errors.TimeoutException: Timeout of 60000ms expired before the position for partition vay-0 could be determined
-[2023-11-26 01:21:30,614] ERROR [elasticsearch-sink|task-0] WorkerSinkTask{id=elasticsearch-sink-0} Task threw an uncaught and unrecoverable exception. Task is being killed and will not recover until manually restarted (org.apache.kafka.connect.runtime.WorkerTask:212)
-org.apache.kafka.common.errors.TimeoutException: Timeout of 60000ms expired before the position for partition vay-0 could be determined
