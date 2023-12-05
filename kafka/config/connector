@@ -16,6 +16,9 @@ type.name=_doc
 
 key.converter=org.apache.kafka.connect.json.JsonConverter
 value.converter=org.apache.kafka.connect.json.JsonConverter
+#for better performance
+linger.ms=1000
+batch.size=1000
 
 
 key.converter.schemas.enable=false
