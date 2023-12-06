@@ -8,6 +8,7 @@ bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic testTopi
 
 ./bin/zookeeper-shell.sh localhost:2181 ls /brokers/ids
 
+bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic gg2
 
 /usr/local/kafka/bin/connect-standalone.sh /etc/kafka/connect-standalone.properties  ./quickstart-elasticsearch.properties
 
