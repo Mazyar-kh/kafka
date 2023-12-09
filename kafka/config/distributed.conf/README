@@ -1,0 +1,13 @@
+#we can create the topic useing the following command:
+bin/kafka-topics.sh --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic dis [--config cleanup.policy=compact]
+
+
+#after that we creating the distribute mode config file
+#the next step is to Configure and Start Elasticsearch sink Connector based on the included file.
+#after compliteing all the privious steps now we can start the connector:
+connect-distributed.sh connect-distributed.properties
+#Use the following command to submit the Elasticsearch Sink Connector configuration:
+curl -X POST -H "Content-Type: application/json" --data @elasticsearch-sink-config.json http://localhost:8083/connectors
+#after that we can produce messages to kafka topic "dis"
+#Monitor the status of Kafka Connect and the Elasticsearch Sink Connector:
+curl http://localhost:8083/connectors/elasticsearch-sink-dis/status
