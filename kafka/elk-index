@@ -29,3 +29,5 @@ curl -XPUT "http://localhost:9200/example_index" -H 'Content-Type: application/j
   }
 }'
 ################
+#elk/gg2-index mapping:
+{"gg2":{"mappings":{"properties":{"field1":{"type":"keyword"},"key":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"value":{"properties":{"field1":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field11":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field17":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field2":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field22":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field3":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field7":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}},"field8":{"type":"text","fields":{"keyword":{"type":"keyword","ignore_above":256}}}}}}}}}[
