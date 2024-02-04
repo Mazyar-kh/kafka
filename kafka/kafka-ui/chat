@@ -1,0 +1,94 @@
+It looks like there is an issue resolving the address for Kafka Manager Zookeeper. The error message indicates a "Temporary failure in name resolution." The hostname "kafka-manager-zookeeper" cannot be resolved.
+
+Here are a few things to check and resolve the issue:
+
+Hosts File:
+Ensure that the hostname "kafka-manager-zookeeper" is properly configured in your /etc/hosts file. Open the file using a text editor:
+
+bash
+Copy code
+sudo nano /etc/hosts
+Add an entry like this:
+
+Copy code
+127.0.0.1 kafka-manager-zookeeper
+Zookeeper Configuration:
+Double-check the Zookeeper configuration in your Kafka Manager's application.conf file. It should contain the correct Zookeeper connection details. Open the configuration file:
+
+bash
+Copy code
+nano /root/cmak-3.0.0.7/conf/application.conf
+Ensure that the Zookeeper hosts are correctly specified.
+
+Zookeeper Availability:
+Make sure that your Zookeeper server is up and running. Verify that the Zookeeper service is accessible and the specified port (default is 2181) is open.
+
+Network Configuration:
+Check the network configuration to ensure that there are no restrictions preventing the resolution of the hostname.
+
+After making these checks and adjustments, restart Kafka Manager and see if the issue persists:
+
+bash
+Copy code
+./bin/cmak
+If the problem persists or if you have specific configuration details you'd like assistance with, feel free to share more information.
+
+User
+how to see kafka version
+ChatGPT
+To check the version of Apache Kafka installed on your system, you can follow these steps:
+
+Using the Kafka Script:
+Navigate to the Kafka installation directory and look for the bin folder. Inside the bin folder, there should be a script named kafka-version.sh or kafka-version.bat. Run the script:
+
+On Unix-based systems (Linux, macOS):
+
+bash
+Copy code
+/path/to/kafka/bin/kafka-version.sh
+On Windows:
+
+cmd
+Copy code
+C:\path\to\kafka\bin\windows\kafka-version.bat
+This script will print the Kafka version to the console.
+
+Check the Kafka Logs:
+You can also check the Kafka broker logs. When Kafka starts, it logs information about the version. The log files are usually located in the logs directory inside your Kafka installation. Look for a log file named server.log or similar.
+
+Use a text editor or cat command to view the content of the log file:
+
+bash
+Copy code
+cat /path/to/kafka/logs/server.log
+Look for a line similar to:
+
+yaml
+Copy code
+[2022-02-04 12:34:56,789] INFO Kafka version: 2.8.0 (org.apache.kafka.common.utils.AppInfoParser)
+The version number will be mentioned in the log.
+
+Kafka CLI:
+If you have Kafka installed and configured, you can use the Kafka command-line tools to query the broker version. For example:
+
+bash
+Copy code
+kafka-broker-api-versions.sh --bootstrap-server localhost:9092
+This command will show various information about the broker, including the Kafka version.
+
+Choose the method that suits your environment and preferences. If you encounter any issues or have specific details about your Kafka installation, feel free to provide more information for further assistance.
+
+User
+in terminal
+ChatGPT
+If you have the Kafka binaries in your system's PATH, you can simply use the kafka-topics.sh script with the --version option to see the Kafka version. Here's how you can do it in the terminal:
+
+bash
+Copy code
+kafka-topics.sh --version
+This command will print the Kafka version information to the terminal. If the Kafka scripts are not in your PATH, you might need to navigate to the Kafka bin directory and run the command from there:
+
+bash
+Copy code
+/path/to/kafka/bin/kafka-topics.sh --version
+Replace "/path/to/kafka" with the actual path to your Kafka installation directory.
