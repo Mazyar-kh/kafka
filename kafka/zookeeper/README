@@ -1,0 +1,1 @@
+in /opt/zookeeper/data we need to add an file named "myid" and in this file we need to give a number to as zookeeper id (it starts from 1 unike kafka which starts from 0)
