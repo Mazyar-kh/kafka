@@ -12,4 +12,5 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic gg2
 
 /usr/local/kafka/bin/connect-standalone.sh /etc/kafka/connect-standalone.properties  ./quickstart-elasticsearch.properties
 
+kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic testTopic
 
