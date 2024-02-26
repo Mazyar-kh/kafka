@@ -1,0 +1,4 @@
+@ashishsoni @shermany
+You can start the kafka cluster by adding JMX_PORT, and I solved the problem by using this command, but the broker metric info is not updated.
+$JMX_PORT=8004 ./kafka-server-start.sh ../config/server.properties &
+
