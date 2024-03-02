@@ -14,3 +14,8 @@ bin/kafka-topics.sh --bootstrap-server localhost:9092 --delete --topic gg2
 
 kafka-topics.sh --bootstrap-server localhost:9092 --describe --topic testTopic
 
+https://statuslist.app/uptime-monitoring/zookeeper/self-hosted/how-to-setup-zookeeper-monitoring-prometheus-grafana/
+
+https://statuslist.app/uptime-monitoring/zookeeper/self-hosted/how-to-setup-zookeeper-monitoring-prometheus-grafana/
+
+https://computingforgeeks.com/install-prometheus-server-on-debian-ubuntu-linux/
